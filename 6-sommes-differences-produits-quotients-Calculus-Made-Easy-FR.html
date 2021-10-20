@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Etape suivante : les constantes | Calculus Made Easy</title>
+<link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
+<style>
+body{counter-reset:h1 6}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Sommes, différences, produits et quotients</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Nous avons jusqu'ici appris à dériver des expressions algébriques relativement simples comme $x^2 + c$ ou $ax^4$. Et nous allons maintenant considérer la  <em>somme</em><a name="sumdiffer"/> de deux fonctions ou plus. 
+</p>
+
+<p>Par exemple soit : 
+\[
+y = (x^2+c) + (ax^4+b);
+\]
+Que vaudra sa dérivée $\dfrac{dy}{dx}$ ? Comment appréhender ces nouvelles expériences intellectuelles?
+</p>
+
+<p>La réponse à cette question est relativement simple : les dériver l'une après l'autre. Comme ceci:
+\[
+\dfrac{dy}{dx} = 2x + 4ax^3. (Ans.)
+\]
+
+<p>Si vous avez un doute sur la véracité de ce principe, essayez d'appliquer les premiers principes de calculs appliqués ici pour vous en convaincre. 
+</p>
+
+<p>soit $y = u+v$, où $u$ et $v$ sont deux fonctions de $x$, que l'on additionne pour donner $y$. Ainsi faire croître $x$ en $x+dx$ fera croître $y$ en $dy$. Et $u$ deviendra $u+du$ et $v$, $v +dv$. 
+</p>
+
+<p>Et nous devrions avoir : </p>
+
+<p>$  y+dy = u+du + v+dv.$ </p>
+<p>En soustrayant l'original $y = u+v$, on obtient </p>
+<p>$dy = du+dv, $ </p>
+<p>et en divisant par $dx$, on obtient: </p>
+<p>$\dfrac{dy}{dx} = \dfrac{du}{dx} + \dfrac{dv}{dx}.$ </p>
+
+<p>Tout cela justifie la procédure que l'on vient de montrer : vous différentiez chaque fonction que vous ajoutez ensemble. Donc si on prend l'exemple du paragraphe précédent, en utilisant les expressions des deux fonctions on devrait avoir, en utilisant la notation montrée (<a href="3-Croissances-relatives-Calculus-Made-Easy-FR.html#note">dans le chapitre III</a>),
+\begin{alignat*}{2}
+\frac{dy}{dx}
+  & = \frac{d(x^2+c)}{dx} &&+ \frac{d(ax^4+b)}{dx} \\
+  & = 2x                  &&+ 4ax^3,
+\end{alignat*}
+exactement comme avant.
+</p>
+
+<p>Si il y avait en fait trois fonctions de $x$, que l'on appellerait $u$, $v$ et $w$, de manière à ce que :
+\begin{align*}
+y &= u+v+w; \\
+\end{align*}
+Alors :
+\begin{align*}
+\frac{dy}{dx} &= \frac{du}{dx} + \frac{dv}{dx} + \frac{dw}{dx}.
+\end{align*}
+</p>
+
+<p>Comme pour l'addition, la soustraction en découle immédiatement. su une fonction $v$ a un signe négatif devant elle, sa différentielle le conservera. Ainsi par dérivation :
+\begin{align*}
+y &= u-v, \\
+\end{align*}
+on devrait avoir :
+\begin{align*}
+\frac{dy}{dx} &= \frac{du}{dx} - \frac{dv}{dx}.
+\end{align*}
+
+<p>En revanche quand on arrive au <em>produit</em>, les choses ne sont plus si simples. 
+</p>
+
+<p>Supposons que nous devions dériver l'expression  :
+\[
+y = (x^2+c) × (ax^4+b),
+\]
+Comment faire? Le résultat <em>ne sera certainement pas</em>   $2x × 4ax^3$; pour cela il est facile de voir que ni  $c × ax^4$, ni $x^2 × b$, n'ont été pris en compte dans le produit. 
+</p>
+
+<p>a partir de là, on a deux manières de faire pour se mettre à travailler sur ce produit; 
+</p>
+
+<p><em>Première méthode.</em> Faire la multiplication en premier puis dériver l'expression obtenue en dérivant.
+</p>
+
+<p>Comme énoncé précédemment, multiplions $x^2 + c$ et $ax^4 + b$.
+</p>
+
+<p>Cela donne $ax^6 + acx^4 + bx^2 + bc$.
+</p>
+
+<p>Maintenant en dérivant on obtient :
+\[
+\dfrac{dy}{dx} = 6ax^5 + 4acx^3 + 2bx.
+\]
+</p>
+
+<p><em>Deuxième méthode.</em> On réapplique les premiers principes vus pour dériver une fonction en considérant l'équation :
+\[
+y = u × v;
+\]
+où $u$ et $v$ sont deux fonctions de la variable $x$. Alors, en faisant croître $x$ en $x + dx$, avec $y$ qui devient alors $y+dy$; De la même manière $u$ devient $u + du$ et $v$ devient $v +dv$. Nous devrions donc avoir : 
+\begin{align*}
+ y + dy &= (u + du) × (v + dv) \\
+        &= u · v + u · dv + v · du + du · dv.
+\end{align*}
+</p>
+
+<p>Maintenant $du · dv$ est une petite quantité du second ordre de petitesse, il peut être négligé, pour donner : 
+\[
+y + dy = u · v + u · dv + v · du.
+\]
+</p>  
+
+<p>Puis, en soustrayant  $y = u· v$, il reste :
+\[
+dy = u · dv + v · du;
+\]
+et en divisant par $dx$ on obtient le résultat:
+\[
+\dfrac{dy}{dx} = u\, \dfrac{dv}{dx} + v\, \dfrac{du}{dx}.
+\]
+</p>
+
+<p>Tout ceci nous apprend que : <a name="differprod"/>
+<em>Pour dériver un produit de deux fonctions, il faut multiplier chaque fonction par le coefficient différentiel de l'autre et ajouter les deux produits obtenus. </em>
+</p>
+
+<p>Pour se rappeler de comment dériver un produit, vous pouvez mémoriser les choses comme suit : Considérer que $u$ est une constante pendant que l'on dérive $v$; puis voir $v$ comme une constante et dériver $u$. La dérivée complète $\dfrac{dy}{dx}$ sera la somme de ces deux termes. 
+</p>
+
+<p>Maintenant que nous avons trouvé cette formule, appliquons là à notre exemple ci-dessus. 
+</p>
+
+<p>Nous voulons dériver ce produit :
+\[
+(x^2 + c) × (ax^4 + b).
+\]
+</p>
+
+<p>Posons $(x^2 + c) = u$; et $(ax^4 + b) = v$.
+</p>
+
+<p>Alors, à l'aide de la formule générale que nous venons de trouver, nous pouvons écrire : 
+\begin{alignat*}{2}
+\dfrac{dy}{dx}
+&= (x^2 + c)\, \frac{d(ax^4 + b)}{dx} &&+ (ax^4 + b)\, \frac{d(x^2 + c)}{dx} \\
+&= (x^2 + c)\, 4ax^3                  &&+ (ax^4 + b)\, 2x \\
+&= 4ax^5 + 4acx^3                     &&+ 2ax^5 + 2bx,   \\
+
+\dfrac{dy}{dx}
+&= 6ax^5 + 4acx^3                     &&+ 2bx,
+\end{alignat*}
+Exactement comme précédemment.
+</p>
+
+
+<p>Pour finir, voyons comment différencier les <em>quotients</em>. 
+</p>
+
+
+<p>Pensez à cet exemple : $y = \dfrac{bx^5 + c}{x^2 + a}$. Dans un tel cas, il n'est pas possible de calculer cette division, le numérateur $x^2 + a$ n'est pas un multiple du dénominateur $bx^5 + c$ et n'ont aucun facteur commun. Donc il n'y a rien d'autres à faire que d'appliquer les premières méthodes de dérivation vues au début et de trouver une formule. Donc soit : 
+\[
+y = \frac{u}{v};
+\]
+où $u$ et $v$ sont deux fonctions différentes de la variable indépendante $x$. Alors, quand $x$ est modifié en $x+dx$, $y$ devient $y+dy$ et $u$  et $v$ deviennent $u+du$ et $v +dv$ respectivement. Ainsi : 
+\[
+y + dy = \dfrac{u + du}{v + dv}.
+\]
+</p>
+
+<p>On réalise maintenant la division algébrique : 
+<a name="figure666a">
+<img src="https://calculusmadeeasy.org/33283-t/images/666a.pdf.png-1.png">
+</p>
+
+<p>Les restes de la division sont du second ordre, ils peuvent donc être négligés, la division peut s'arrêter là. Les termes suivants de la division seront d'ordres supérieurs. 
+</p>
+
+<p>On a donc :
+\begin{align*}
+y + dy &= \dfrac{u}{v} + \dfrac{du}{v} - \dfrac{u· dv}{v^2}; \\
+\end{align*}
+qui peut être réécrit : 
+\begin{align*}
+&= \dfrac{u}{v} + \dfrac{v· du - u· dv}{v^2}. \\
+\end{align*}
+Maintenant en soustrayant la fonction originale $y = \dfrac{u}{v}$, il reste :
+\begin{align*}
+dy &= \dfrac{v· du - u· dv}{v^2}; \\
+\end{align*}
+d'où :
+\begin{align*}
+\dfrac{dy}{dx}
+&= \dfrac{v\, \dfrac{du}{dx} - u\, \dfrac{dv}{dx}}{v^2}.
+\end{align*}
+</p>
+
+<p>Cette formule donne les instructions pour <em>dériver un quotient de deux fonctions</em>. On multiplie la fonction au dénominateur par la dérivée du numérateur, ce à quoi on soustraie la fonction au numérateur par la dérivée de celle au dénominateur, on divise le tout par le carré de la fonction au dénominateur.
+</p>
+
+<p>
+En revenant à notre exemple  $y = \dfrac{bx^5 + c}{x^2 + a}$,
+Ecrire : 
+\begin{align*}
+bx^5 + c &= u; \\
+\end{align*}
+et : 
+\begin{align*}
+x^2  + a &= v.
+\end{align*}
+</p>
+
+<p>Alors 
+\begin{align*}
+\frac{dy}{dx}
+&= \frac{(x^2 + a)\, \dfrac{d(bx^5 + c)}{dx} - (bx^5 + c)\, \dfrac{d(x^2 + a)}{dx}}{(x^2 + a)^2} \\
+&= \frac{(x^2 + a)(5bx^4) - (bx^5 + c)(2x)}{(x^2 + a)^2}, \\
+\frac{dy}{dx}
+&= \frac{3bx^6 + 5abx^4 - 2cx}{(x^2 + a)^2}.
+\end{align*}
+Ce dernier quotient de fonctions est la dérivée recherchée. 
+</p>
+
+<p>Les calculs des dérivées de quotients peuvent être fastidieux, mais finalement ne sont pas difficile. 
+</p>
+
+<p>Quelques exemples corrigés dans le détails sont donnés dans la suite.<a name="examples3"/>
+</p>
+
+<p>(1) Dériver $y = \dfrac{a}{b^2} x^3 - \dfrac{a^2}{b} x + \dfrac{a^2}{b^2}$.
+</p>
+
+<p>Etant constante, la fraction $\dfrac{a^2}{b^2}$ disparait et nous avons : 
+\[
+\frac{dy}{dx} = \frac{a}{b^2} × 3 × x^{3-1} - \frac{a^2}{b} × 1 × x^{1-1}.
+\]
+</p>
+
+<p>Mais $x^{1-1} = x^0 = 1$; donc on obtient :
+\[
+\frac{dy}{dx} = \frac{3a}{b^2} x^2 - \frac{a^2}{b}.
+\]
+</p>
+
+<p>(2) Dériver $y = 2a\sqrt{bx^3} - \dfrac{3b \sqrt[3]{a}}{x} - 2\sqrt{ab}$.
+</p>
+
+<p>On peut écrire les termes en $x$ sous la forme suivante : 
+\[
+y = 2a\sqrt{b} x^{\frac{3}{2}} - 3b \sqrt[3]{a} x^{-1} - 2\sqrt{ab}.
+\]
+</p>
+
+<p>Donc :
+\[
+\frac{dy}{dx} = 2a\sqrt{b} × \tfrac{3}{2} × x^{\frac{3}{2}-1} - 3b\sqrt[3]{a} × (-1) × x^{-1-1}; \\
+\]
+autrement écrit :
+\[
+\frac{dy}{dx} = 3a\sqrt{bx} + \frac{3b\sqrt[3]{a}}{x^2}.
+\]
+</p>
+
+<p>(3) Dériver $z = 1.8 \sqrt[3]{\dfrac{1}{\theta^2}} - \dfrac{4.4}{\sqrt[5]{\theta}} - 27°$.
+
+<p>Qui peut se réécrire : $z= 1.8\, \theta^{-\frac{2}{3}} - 4.4\, \theta^{-\frac{1}{5}} - 27°$.
+
+<p>Le terme $27°$ disparait et on obtient : 
+\[
+\frac{dz}{d\theta}
+  = 1.8 × -\tfrac{2}{3} × \theta^{-\frac{2}{3}-1}
+  - 4.4 × \left(-\tfrac{1}{5}\right)\theta^{-\frac{1}{5}-1}; \\
+ \text{ou}\;,
+\frac{dz}{d\theta}
+  = -1.2\, \theta^{-\frac{5}{3}} + 0.88\, \theta^{-\frac{6}{5}}; \\
+\text{ou encore,}\;
+\frac{dz}{d\theta} = \frac{0.88}{\sqrt[5]{\theta^6}}
+  - \frac{1.2}{\sqrt[3]{\theta^5}}.
+\]
+
+<p>(4) Dériver $v = (3t^2 - 1.2 t + 1)^3$.
+
+<p>Une manière plus direct de calculer ce type de dérivées sera expliqué plus tard (voir <a href="9.html#dodge">ici</a>); mais nous pouvons malgré tout calculer cette dérivée sans difficulté. 
+</p>
+
+<p>En développant le cube on obtient :
+\[
+v = 27t^6 - 32.4t^5 + 39.96t^4 - 23.328t^3 + 13.32t^2 - 3.6t + 1;
+\]
+donc
+\[
+\frac{dv}{dt} = 162t^5 - 162t^4 + 159.84t^3 - 69.984t^2 + 26.64t - 3.6.
+\]
+
+<p>(5) Dériver $y = (2x - 3)(x + 1)^2$.
+\begin{alignat*}{2}
+\frac{dy}{dx}
+  &= (2x - 3)\, \frac{d\bigl[(x + 1)(x + 1)\bigr]}{dx}
+     &&+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\
+  &= (2x - 3) \left[(x + 1)\, \frac{d(x + 1)}{dx}\right.
+     &&+ \left.(x + 1)\, \frac{d(x + 1)}{dx}\right] \\
+  &  &&+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\
+
+  &= 2(x + 1)\bigl[(2x - 3) + (x + 1)\bigr] &&= 2(x + 1)(3x - 2)
+\end{alignat*}
+Ou tout simplement en développant l'expression et dérivant terme à terme. 
+</p>
+
+<p>(6) Dériver $y = 0.5 x^3(x-3)$.
+\begin{align*}
+\frac{dy}{dx}
+  &= 0.5\left[x^3 \frac{d(x-3)}{dx} + (x-3) \frac{d(x^3)}{dx}\right] \\
+  &= 0.5\left[x^3 + (x-3) × 3x^2\right] = 2x^3 - 4.5x^2.
+\end{align*}
+</p>
+
+<p>Mêmes remarques que précédemment. 
+</p>
+
+<p>(7) Dériver $w = \left(\theta + \dfrac{1}{\theta}\right)
+   \left(\sqrt{\theta} + \dfrac{1}{\sqrt{\theta}}\right)$.
+
+<p>Qui peut se réécrire :
+\begin{gather*}
+w = (\theta + \theta^{-1})(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}}). \\
+\begin{aligned}
+\frac{dw}{d\theta}
+  &= (\theta + \theta^{-1})
+     \frac{d(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})}{d\theta}
+   + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})
+     \frac{d(\theta+\theta^{-1})}{d\theta} \\
+
+  &= (\theta + \theta^{-1})(\tfrac{1}{2}\theta^{-\frac{1}{2}}
+                          - \tfrac{1}{2}\theta^{-\frac{3}{2}})
+   + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})(1 - \theta^{-2}) \\
+
+  &= \tfrac{1}{2}(\theta^{ \frac{1}{2}} + \theta^{-\frac{3}{2}}
+                - \theta^{-\frac{1}{2}} - \theta^{-\frac{5}{2}})
+   + (\theta^{ \frac{1}{2}} + \theta^{-\frac{1}{2}}
+    - \theta^{-\frac{3}{2}} - \theta^{-\frac{5}{2}}) \\
+
+  &= \tfrac{3}{2} \left(\sqrt{\theta} - \frac{1}{\sqrt{\theta^5}}\right)
+   + \tfrac{1}{2} \left(\frac{1}{\sqrt{\theta}} - \frac{1}{\sqrt{\theta^3}}\right).
+\end{aligned}
+\end{gather*}
+
+<p>Encore une fois, on aurait pu obtenir le résultat en développant l'expression et en dérivant chaque terme. Mais ce n'est pas forcément possible à chaque fois. Par exemple voir   <a href="16.html#example1">ici</a>, exemple 8, dans lequel la formule de dérivation d'un produit <em>doit</em> être utilisée. 
+</p>
+
+<p>(8) Dériver $y =\dfrac{a}{1 + a\sqrt{x} + a^2x}$.
+\begin{align*}
+\frac{dy}{dx}
+  &= \frac{(1 + ax^{\frac{1}{2}} + a^2x) × 0 - a\dfrac{d(1 + ax^{\frac{1}{2}} + a^2x)}{dx}}
+          {(1 + a\sqrt{x} + a^2x)^2} \\
+  &= - \frac{a(\frac{1}{2}ax^{-\frac{1}{2}} + a^2)}
+            {(1 + ax^{\frac{1}{2}} + a^2x)^2}.
+\end{align*}
+</p>
+
+<p>(9) Dériver $y = \dfrac{x^2}{x^2 + 1}$.
+\[
+\dfrac{dy}{dx} = \dfrac{(x^2 + 1)\, 2x - x^2 × 2x}{(x^2 + 1)^2} = \dfrac{2x}{(x^2 + 1)^2}.
+\]
+</p>
+
+<p>(10) Dériver $y = \dfrac{a + \sqrt{x}}{a - \sqrt{x}}$.
+</p>
+
+<p>En mettant les termes en $x$ sous forme de puissance, $y = \dfrac{a + x^{\frac{1}{2}}}{a - x^{\frac{1}{2}}}$.
+\[
+\frac{dy}{dx}
+  = \frac{(a - x^{\frac{1}{2}})( \tfrac{1}{2} x^{-\frac{1}{2}})
+        - (a + x^{\frac{1}{2}})(-\tfrac{1}{2} x^{-\frac{1}{2}})}
+         {(a - x^{\frac{1}{2}})^2}
+  = \frac{ a - x^{\frac{1}{2}}
+         + a + x^{\frac{1}{2}}}
+        {2(a - x^{\frac{1}{2}})^2\, x^{\frac{1}{2}}}; \\
+\]
+donc
+\[
+\frac{dy}{dx} = \frac{a}{(a - \sqrt{x})^2\, \sqrt{x}}.
+\]
+</p>
+
+<p>(11) Dériver
+</p>
+
+<p>\begin{align*}
+\theta &= \frac{1 - a \sqrt[3]{t^2}}{1 + a \sqrt[2]{t^3}}. \\
+   \text{Now}\;
+\theta &= \frac{1 - at^{\frac{2}{3}}}{1 + at^{\frac{3}{2}}}.
+\end{align*}
+\begin{align*}
+\frac{d\theta}{dt}
+  &= \frac{(1 + at^{\frac{3}{2}}) (-\tfrac{2}{3} at^{-\frac{1}{3}})
+         - (1 - at^{\frac{2}{3}}) × \tfrac{3}{2} at^{\frac{1}{2}}}
+          {(1 + at^{\frac{3}{2}})^2} \\
+  &= \frac{5a^2 \sqrt[6]{t^7} - \dfrac{4a}{\sqrt[3]{t}} - 9a \sqrt[2]{t}}
+          {6(1 + a \sqrt[2]{t^3})^2}.
+\end{align*}
+</p> 
+<p>(12) A traduire</p> 
+<!-- <p>(12) A reservoir of square cross-section has sides
+sloping at an angle of $45°$ with the vertical. The side
+
+of the bottom is $200$ feet. Find an expression for the
+quantity pouring in or out when the depth of water
+varies by $1$ foot; hence find, in gallons, the quantity
+withdrawn hourly when the depth is reduced from
+$14$ to $10$ feet in $24$ hours.
+</p>
+
+<p>The volume of a frustum of pyramid of height $H$,
+and of bases $A$ and $a$, is $V = \dfrac{H}{3} (A + a + \sqrt{Aa} )$. It is
+easily seen that, the slope being $45°$, if the depth be
+$h$, the length of the side of the square surface of the
+water is $200 + 2h$ feet, so that the volume of water is
+\[
+\dfrac{h}{3} [200^2 + (200 + 2h)^2 + 200(200 + 2h)]
+= 40,000h + 400h^2 + \dfrac{4h^3}{3}.
+</p>
+\]
+
+<p>$\dfrac{dV}{dh} = 40,000 + 800h + 4h^2 = {}$ cubic feet per foot of depth
+variation. The mean level from $14$ to $10$ feet is
+$12$ feet, when $h = 12$, $\dfrac{dV}{dh} = 50,176$ cubic feet.
+</p>
+
+<p>Gallons per hour corresponding to a change of depth
+of $4$ ft. in $24$ hours ${} = \dfrac{4 × 50,176 × 6.25}{24} = 52,267$ gallons.
+</p> -->
+
+<p>(13) La pression absolue $P$ en  atmosphère, de la vapeur saturée à température $t°$ C. est donnée par la formule de Dulong, par :  $P = \left( \dfrac{40 + t}{140} \right)^5$ tant que $t$ reste au dessus de $80°$. Trouver le taux de variation de la pression pour une température de $100°$. 
+</p>
+
+<p>On développe le numérateur à l'aide de la formule du binôme de newton. Que l'on verra  <a href="14.html#binomtheo">ici</a>.
+\[
+P = \frac{1}{140^5} (40^5 + 5×40^4 t + 10 × 40^3 t^2 + 10 × 40^2 t^3
+                            + 5 × 40t^4 + t^5);
+\]
+Donc
+\begin{align*}
+\dfrac{dP}{dt} = &\dfrac{1}{537,824 × 10^5}\\
+      &(5 × 40^4 + 20 × 40^3 t + 30 × 40^2 t^2 + 20 × 40t^3 + 5t^4),
+\end{align*}
+Quand  $t = 100°$ cela devient $0.036$ atmosphère par degré centigrade.
+</p>
+
+<p>
+<hr><h3>Exercices III</h3>
+
+<p>
+(1) Dériver <a name="examples2"/>
+
+<p>(<em>a</em>)  $u = 1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3} + \dotsb$.
+<p>(<em>b</em>)  $y = ax^2 + bx + c$. (<em>c</em> ) $y = (x + a)^2$.
+<p>(<em>d</em>)  $y = (x + a)^3$.
+
+<p>(2) Si $w = at - \frac{1}{2}bt^2$, trouver  $\dfrac{dw}{dt}$.
+
+<p>(3) Trouver le nombre dérivé de (on ne dit plus $\sqrt{-1}$ mais $i$):
+\[
+y = (x + \sqrt{-1}) × (x - \sqrt{-1}).
+\]
+
+<p>(4) Dériver 
+\[
+y = (197x - 34x^2) × (7 + 22x - 83x^3).
+\]
+
+<p>(5) Si $x = (y + 3) × (y + 5)$, trouver $\dfrac{dx}{dy}$.
+
+<p>(6) Dériver $y = 1.3709x × (112.6 + 45.202x^2)$.
+
+
+<p>Trouver les différentielles des fonctions suivantes :
+
+<p>(7) $y = \dfrac{2x + 3}{3x + 2}$.
+<p>(8) $y = \dfrac{1 + x + 2x^2 + 3x^3}{1 + x + 2x^2}$.
+<p>(9) $y = \dfrac{ax + b}{cx + d}$.
+<p>(10) $y = \dfrac{x^n + a}{x^{-n} + b}$.
+
+<p>(11) La température  $t$ du filament d'une lampe à incandescence est léie au courant qui passe dans la lampe selon cette relation : 
+\[
+C = a + bt + ct^2.
+\]
+</p>
+<p>donner la formule liant la variation du courant avec celle de la température. </p<
+
+<p>(12) La formule suivante a été proposée pour exprimer la relation entre la résistance électrique $R$ d'un câble à température $t°C.$,et la résistance $R_0$ de ce même câble à $0°C.$,  $a$, $b$, $c$ étant des constantes.
+\begin{align*}
+R &= R_0(1 + at + bt^2). \\
+R &= R_0(1 + at + b\sqrt{t}). \\
+R &= R_0(1 + at + bt^2)^{-1}.
+\end{align*}
+
+<p>Trouver le taux de variation de la résistance selon la variation de la température dan chaque formule. 
+</p>
+
+<p>(13) La force électromotrice observée $E$ de certains types de cellules varie avec la température $t$ selon la relation : 
+\[
+E = 1.4340 \bigl[1 - 0.000814(t-15)
+                 + 0.000007(t-15)^2\bigr] \text{ volts}.
+\]
+
+<p>Trouver le taux de variations de la force électromotrice par degré, à $15°$, $20°$ et $25°$.
+</p>
+
+<p>(14) La force électromotrice nécessaire à créer et entretenir un arc électrique de longueur $l$ avec un courant d'intensité $i$ a été trouvée par Madame Ayrton : 
+\[
+E = a + bl + \frac{c + kl}{i},
+\]
+où $a$, $b$, $c$, $k$ sont des constantes.
+</p>
+
+<p>Trouver une expression pour la variation de la force électromotrice <br/>
+(<em>a</em>) Selon la longueur de l'arc ;<br/>
+(<em>b</em>) selon la force du courant.
+</p>
+
+<p><h3 class="answers">Réponses</h3>
+
+
+<p>(1)  (<em>a</em>) $1 + x + \dfrac{x^2}{2} + \dfrac{x^3}{6} + \dfrac{x^4}{24} + \ldots$
+  <p>(<em>b</em>) $2ax + b$.
+  <p>(<em>c</em> ) $2x + 2a$.
+    <p>(<em>d</em>) $3x^2 + 6ax + 3a^2$.
+
+<p>(2)  $\dfrac{dw}{dt} = a - bt$.
+<p>(3)  $\dfrac{dy}{dx} = 2x$.
+<p>(4)  $14110x^4 - 65404x^3 - 2244x^2 + 8192x + 1379$.
+<p>(5)  $\dfrac{dx}{dy} = 2y + 8$.
+<p>(6)  $185.9022654x^2 + 154.36334$.
+<p>(7)  $\dfrac{-5}{(3x + 2)^2}$.
+<p>(8)  $\dfrac{6x^4 + 6x^3 + 9x^2}{(1 + x + 2x^2)^2}$.
+<p>(9)  $\dfrac{ad - bc}{(cx + d)^2}$.
+<p>(10)  $\dfrac{anx^{-n-1} + bnx^{n-1} + 2nx^{-1}}{(x^{-n} + b)^2}$.
+<p>(11)  $b + 2ct$.
+<p>(12)  $R_0(a + 2bt)$,&nbsp;&nbsp; $R_0 \left(a + \dfrac{b}{2\sqrt{t}}\right)$,&nbsp;&nbsp;
+  $-\dfrac{R_0(a + 2bt)}{(1 + at + bt^2)^2}$&nbsp;&nbsp; or&nbsp;&nbsp; $\dfrac{R^2 (a + 2bt)}{R_0}$.
+
+<p>(13)  $1.4340(0.000014t - 0.001024)$,&nbsp;&nbsp; $-0.00117$,&nbsp;&nbsp; $-0.00107$,&nbsp;&nbsp; $-0.00097$.
+
+<p>(14)  $\dfrac{dE}{dl} = b + \dfrac{k}{i}$,&nbsp;&nbsp; $\dfrac{dE}{di} = -\dfrac{c + kl}{i^2}$.
+
+<p>
+
+<br>
+<hr>
+<a href="7-derivees-successives-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B32DJQB8BK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B32DJQB8BK');
+</script>
+</body>
+</html>
