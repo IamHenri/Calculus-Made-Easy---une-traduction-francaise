@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Etape suivante : les constantes | Calculus Made Easy</title>
+<link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
+<style>
+body{counter-reset:h1 7}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Dérivées successives</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Essayons de voir quel effet a l'opération de dériver plusieurs fois une fonction (voir  <a href="3.html#function">ici</a>). Commençons avec un cas concret :
+
+<p>Soit $y = x^5$.<br/>
+Première dérivée
+\begin{alignat*}{3}
+& &&5x^4.              &&         \\
+\end{alignat*}
+Deuxième dérivée
+\begin{alignat*}{3}
+& &&5 × 4x^3           &&= 20x^3. \\
+\end{alignat*}
+Troisième dérivée
+\begin{alignat*}{3}
+& &&5 × 4 × 3x^2       &&= 60x^2. \\
+\end{alignat*}
+Quatrième dérivée
+\begin{alignat*}{3}
+& &&5 × 4 × 3 × 2x     &&= 120x.  \\
+\end{alignat*}
+Cinquième dérivée
+\begin{alignat*}{3}
+& &&5 × 4 × 3 × 2 × 1  &&= 120.   \\
+\end{alignat*}
+Sixième dérivée
+\begin{alignat*}{3}
+& &&                  &&= 0.
+\end{alignat*}
+
+<p>Il existe une certaine notation, que nous avons déjà vue, (voir <a href="3.html#notation">ici</a>), utilisée dans certains cas, qui reste très pratique. Tout d'abord on va utiliser le symbole général $f(x)$, où le symbole $f( )$ se lit “fonction de,” sans dire explicitement de quelle fonction il s'agit. Ainsi, l'expression $y=f(x)$ nous dit en gros que $y$ est une fonction de $x$, qui pourrait être $x^2$ ou $ax^n$, ou $\cos x$ ou n'importe quelle autre fonction compliquée de $x$. 
+</p>
+
+<p>Le symbole correspondant au coefficient différentiel, à la dérivée est $f'(x)$, qui est plus simple à écrire que $\dfrac{dy}{dx}$. On appelle $f'(x)$ la “fonction dérivée” de $x$.
+
+<p>Supposons que l'on dérive à nouveau, on aura donc la “dérivée seconde de la fonction” ou différentielle seconde, ou encore coefficient différentiel du second ordre, noté $f''(x)$; et ainsi de suite. 
+</p>
+
+<p>Maintenant généralisons. 
+</p>
+
+<p>Soit $y = f(x) = x^n$.
+Première différentiation:
+\begin{align*}
+   f'(x) &= nx^{n-1}. \\
+\end{align*}
+Deuxième  différentiation:
+\begin{align*}
+   f''(x) &= n(n-1)x^{n-2}. \\
+\end{align*}
+Troisième  différentiation:
+\begin{align*}
+    f'''(x) &= n(n-1)(n-2)x^{n-3}. \\
+\end{align*}
+Quatrième  différentiation:
+\begin{align*}
+    f''''(x) &= n(n-1)(n-2)(n-3)x^{n-4}. \\
+\end{align*}
+$\llap{\text{etc.,}}$
+
+<p>Mais ce n'est pas le seul moyen de noter, d'indiquer qu'une fonction est une dérivée multiple. On a, si la fonction originale est :
+\begin{align*}
+  y &= f(x);  \\
+\end{align*}
+  une fois dérivée on a:
+\begin{align*}
+  \frac{dy}{dx} &= f'(x); \\
+\end{align*}
+une deuxième différentiation donne :
+\begin{align*}
+  \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &= f''(x);
+\end{align*}
+ce qui est plus communément écrit $\dfrac{d^2y}{(dx)^2}$, ou même encore plus utilisé : $\dfrac{d^2y}{dx^2}$. De la même manière, on écrira pour la différentielle troisième $\dfrac{d^3y}{dx^3} = f'''(x)$.
+<hr>
+
+<p>
+<p><em>Exemples</em>
+Maintenant essayons avec :  $y = f(x) = 7x^4 + 3.5x^3 - \frac{1}{2}x^2 + x - 2$.
+\begin{align*}
+\frac{dy}{dx}     &= f'(x) = 28x^3 + 10.5x^2 - x + 1, \\
+\frac{d^2y}{dx^2} &= f''(x) = 84x^2 + 21x - 1,        \\
+\frac{d^3y}{dx^3} &= f'''(x) = 168x + 21,             \\
+\frac{d^4y}{dx^4} &= f''''(x) = 168,                  \\
+\frac{d^5y}{dx^5} &= f'''''(x) = 0.
+\end{align*}
+De la même manière si  $y = \phi(x) = 3x(x^2 - 4)$,
+\begin{align*}
+\phi'(x)    &= \frac{dy}{dx} = 3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = 3(3x^2 - 4), \\
+\phi''(x)   &= \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\
+\phi'''(x)  &= \frac{d^3y}{dx^3} = 18, \\
+\phi''''(x) &= \frac{d^4y}{dx^4} = 0.
+\end{align*}
+
+<p>
+
+<hr><h3>Exercices IV</h3>
+
+<p>Trouver $\dfrac{dy}{dx}$ et $\dfrac{d^2y}{dx^2}$ pour les expressions suivantes :
+<p>(1) $y = 17x + 12x^2$.
+<p>(2) $y = \dfrac{x^2 + a}{x + a}$.
+<p>(3) $y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1×2} + \dfrac{x^3}{1×2×3} + \dfrac{x^4}{1×2×3×4}$.
+<p>(4) Trouver les dérivées secondes et troisième des fonctions de l'exercice III. (<a href="6-sommes-differences-produits-quotients-Calculus-Made-Easy-FR.html#examples2">ici</a>), No. 1 à No. 7, et l'exemple donné  (<a href="6-sommes-differences-produits-quotients-Calculus-Made-Easy-FR.html#examples3">ici</a>), No. 1 to No. 7.
+
+<p><h3 class="answers">Réponses</h3>
+<p>(1)  $17 + 24x$;&nbsp;&nbsp; $24$.
+<p>(2)  $\dfrac{x^2 + 2ax - a}{(x + a)^2}$;&nbsp;&nbsp; $\dfrac{2a(a + 1)}{(x + a)^3}$.
+<p>(3)  $1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3}$;&nbsp;&nbsp; $1 + x + \dfrac{x^2}{1 × 2}$.
+
+<p><em>Exercices III</em>
+
+<p>(4)  (<em>Exercices III.</em> ):
+
+<p>(1) (<em>a</em> ) $\dfrac{d^2 y}{dx^2} = \dfrac{d^3 y}{dx^3} = 1 + x + \frac{1}{2}x^2 + \frac{1}{6} x^3 + \ldots$.
+   <p>(<em>b</em> ) $2a$, $0$.
+   <p>(<em>c</em> ) $2$, $0$.
+   <p>(<em>d</em> ) $6x + 6a$, $6$.
+
+<p>(2) $-b$, $0$.
+<p>(3) $2$, $0$.
+<p>(4) $\begin{gathered}[t]
+    56440x^3 - 196212x^2 - 4488x + 8192. \\
+    169320x^2 - 392424x - 4488.
+    \end{gathered}$
+<p>(5) $2$, $0$.
+<p>(6) $371.80453x$, $371.80453$.
+<p>(7) $\dfrac{30}{(3x + 2)^3}$,&nbsp;&nbsp; $-\dfrac{270}{(3x + 2)^4}$.
+
+<p><em>Exemples</em> :
+
+<p>(1) $\dfrac{6a}{b^2} x$,&nbsp;&nbsp; $\dfrac{6a}{b^2}$.
+<p>(2) $\dfrac{3a \sqrt{b}} {2 \sqrt{x}} - \dfrac{6b \sqrt[3]{a}}{x^3}$,&nbsp;&nbsp;
+$\dfrac{18b \sqrt[3]{a}}{x^4} - \dfrac{3a \sqrt{b}}{4 \sqrt{x^3}}$.
+
+<p>(3)
+$\dfrac{2}{\sqrt[3]{\theta^8}} - \dfrac{1.056}{\sqrt[5]{\theta^{11}}}$,&nbsp;&nbsp;
+$\dfrac{2.3232}{\sqrt[5]{\theta^{16}}} - \dfrac{16}{3 \sqrt[3]{\theta^{11}}}$.
+
+<p>(4)  $\begin{gathered}[t]
+  810t^4 - 648t^3 + 479.52t^2 - 139.968t + 26.64. \\
+  3240t^3 - 1944t^2 + 959.04t - 139.968.
+  \end{gathered}$
+
+<p>(5)   $12x + 2$, $12$.
+<p>(6) $6x^2 - 9x$,&nbsp;&nbsp; $12x - 9$.
+
+<p>(7)
+$\begin{aligned}[t]
+&\dfrac{3}{4} \left(\dfrac{1}{\sqrt{\theta}} + \dfrac{1}{\sqrt{\theta^5}}\right)
++\dfrac{1}{4} \left(\dfrac{15}{\sqrt{\theta^7}} - \dfrac{1}{\sqrt{\theta^3}}\right). \\
+&\dfrac{3}{8} \left(\dfrac{1}{\sqrt{\theta^5}} - \dfrac{1}{\sqrt{\theta^3}}\right)
+-\dfrac{15}{8}\left(\dfrac{7}{\sqrt{\theta^9}} + \dfrac{1}{\sqrt{\theta^7}}\right).
+\end{aligned}$
+
+<br>
+<hr>
+<a href="8-quand-le-temps-varie-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NK4S73PGE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NK4S73PGE');
+</script>
+</body>
+</html>
