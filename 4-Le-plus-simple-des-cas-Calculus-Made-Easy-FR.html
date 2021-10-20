@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Le plus simple des cas | Calculus Made Easy</title>
+<link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
+<style>
+body{counter-reset:h1 4}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Le plus simple des cas</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Voyons maintenant comme on différentie (dérive) de simple expressions algébriques.</p>
+
+<p><h3>Case 1</h3>
+Commençons avec cette simple expression : $y=x^2$. Maintenant il faut se rappeler que le principal intérêt du calcul différentiel est d'étudier les <em>variations</em> des fonctions : à savoir comment se comporte une fonction quand on fait croître sa variable. On parle aussi de l'étude la <em>croissance</em> (et de la décroissance) des fonctions. Ici, $y$ et $x^2$ sont égaux l'un à l'autre. Il est évident que si $x$ grandit, $x^2$ grandira aussi (essayer avec quelques nombres positifs proches de zéro ou non, ce qui ne fait pas une démonstration!!!). Ce que nous allons chercher ici, c'est la proportion entre la croissance de $x$ et celle de $y$. En d'autres termes, c'est trouver le ration entre $dy$ et $dx$, ou pour dire les choses plus directement, trouver  $\dfrac{dy}{dx}$.</p>
+
+<p>Supposons maintenant que l'on fasse grandir $x$ d'une très petite quantité : $dx$, il devient $x +dx$; de manière similaire, $y$ grandira de $dy$, pour devenir $y + dy$. Il sera donc encore vrai que le $y$ agrandit vaut le $x$ agrandit au carré. Ce qui s'écrit : 
+\begin{align*}
+y + dy &= (x + dx)^2.\\
+\end{align*}
+En mettant $x + dx$ au carré ($(x + dx)^2 = x^2 + 2x · dx+(dx)^2$), on obtient : 
+\begin{align*}
+y + dy &= x^2 + 2x · dx+(dx)^2.
+\end{align*}</p>
+
+<p>Que signifie $(dx)^2$ ? Il faut se rappeler que $dx$ signifie un (tout) petit peu de ... Alors$(dx)^2$ signifie un tout petit peu d'un tout petit peu de $x$. Comme c'est expliqué (<a href="2.html#smallness">au-dessus</a>), c'est une toute petite quantité du second ordre ( de grandeur : lire petitesse). On peut donc le négliger, en comparaison des autres termes. Ce qui donne alors : <a name="diffexample"/>
+\begin{align*}
+y + dy &= x^2 + 2x · dx.  \\
+\end{align*}
+Comme $y=x^2$; on peut les soustraire de l'équation, ce qui nous donne : 
+\begin{align*}
+dy &= 2x · dx.  \\
+\end{align*}
+En divisant par $dx$ on obtient le résultat suivant : 
+\begin{align*}
+\frac{dy}{dx} &= 2x.
+\end{align*}
+</p>
+
+<p>Maintenant <em>c'est</em>* c'est ce que nous avons cherché à calculer. Le ratio de ce que grandit $y$ par rapport à ce que grandit $x$. Dans ce cas, nous avons trouvé $2x$. </p>
+
+<p>
+<note>*<em>Note</em>–Ce ratio  $\dfrac{dy}{dx}$ est le résultat de la dérivée de $y$ par rapport à $x$. "Dériver", ou "différentier" signifie trouver le nombre dérivé, ou la dérivée de la fonction. Supposons maintenant que nous ayons une autre fonction de la variable $x$, par exemple : $u(x) = 7x^2 + 3$.  Nous devons donc trouver   $\dfrac{du}{dx}$, ou, ce qui est la même chose, $\dfrac{d(7x^2 + 3)}{dx}$. D'un autre coté, soit le cas où le temps est la variable indépendante (voir <a href="3.html#indvar">ici</a>), comme ceci :   $y = b + \frac{1}{2} at^2$. Alors, si il nous était demandé de différentier cette expression, nous devons trouver sa différentielle par rapport à $t$. Donc tout le travail est de trouver  $\dfrac{dy}{dt}$, ou, autrement écrit, il faut trouver :
+\begin{align*}
+\dfrac{d(b + \frac{1}{2} at^2)}{dt}$.
+\end{align*}
+</note>
+</p>
+
+<p>
+<em>Exemple d'application numérique.</em><p>
+Supposons que  $x=100$. $\Donc y=10,000$. Supposons maintenant que $x$ croisse de telle manière à valoir $101$, ce qui implique que $dx = 1$ dans ce cas. Alors la valeur de $y$, qui vaut le carré de $x$, vaudra $101 × 101 = 10,201$. Si nous avons admis que nous pouvions nous passer des quantités du second ordre, on pourrait enlever le $1$, comparé au $10 000$; donc on arrondi $y$ à $10 200$. $y$ a donc grandit de $200$, passant de $10 000$ à $10 200$. On peut donc déduire que le $dy$ ajouté vaut $200$ : $dy = 200$.
+</p>
+
+<p>On a donc $\dfrac{dy}{dx} = \dfrac{200}{1} = 200$. Et selon les calculs du paragraphe précédent, nous trouvons $\dfrac{dy}{dx} = 2x$. On a bien $x=100$ et $2x=200$.
+
+<p>Mais vous pourriez dire qu'une unité a été supprimée. </p>
+
+<p>Essayons encore avec cette fois ci $dx$ encore plus petit. </p>
+
+<p>Essayons  $dx=\frac{1}{10}$. Alors $x+dx=100.1$, et :
+\[
+(x+dx)^2 = 100.1 × 100.1 = 10,020.01.
+\]
+</p>
+
+<p>Le dernier chiffre est $1$, qui représente un millionième de $10 000$, et est donc particulièrement négligeable. On peut donc très bien arrondir en supprimant tout ce qui est après le zéro. Ce qui fait $dy=20$; et  $\dfrac{dy}{dx} = \dfrac{20}{0.1} = 200$, on retombe naturellement sur $2x$.
+
+<p>
+<h3>Cas 2</h3>
+Essayons de dériver  $y = x^3$ de la même manière. 
+</p>
+
+<p>$y$ devient $y+dy$, pendant que  $x$ devient $x+dx$.</p>
+
+<p>Alors on a
+\[
+y + dy = (x + dx)^3.
+\]
+</p>
+
+<p>En mettant au cube on obtient :
+\[
+y + dy = x^3 + 3x^2 · dx + 3x(dx)^2+(dx)^3.
+\]
+</p>
+
+<p>Nous voyons que nous allons devoir négliger des quantités du deuxième et troisième ordre; Si $dy$ et $dx$ sont infiniment petits, alors $(dx)^2$ et $(dx)^3$ seront infiniment plus petits par comparaison. On peut donc les voir comme négligeables. Il nous reste donc : 
+\[
+y + dy=x^3+3x^2 · dx.
+\]
+</p>
+
+<p>Mais $y=x^3$; donc par soustraction on obtient :
+\begin{align*}
+dy &= 3x^2 · dx, 
+\end{align*}
+ et
+\begin{align*}
+dy &= 3x^2 · dx, 
+\frac{dy}{dx} &= 3x^2.
+\end{align*}
+
+<h3>Cas 3</h3>
+Essayons de différentier $y=x^4$. On commence de la même manière en faisant grandir $y$ et $x$ un petit peu, ce qui donne :
+\begin{align*}
+y + dy &= (x+dx)^4.  \\
+\end{align*}
+En développant cette puissance quatrième, on obtient :
+\begin{align*}
+y + dy &= x^4 + 4x^3\, dx + 6x^2(dx)^2 + 4x(dx)^3+(dx)^4.  \\
+\end{align*}
+Si on supprime tous les termes contenant une puissance supérieure de $dx$ alors, étant négligeables par comparaison, nous avons : 
+\begin{align*}
+y + dy &= x^4+4x^3\, dx.  \\
+\end{align*}
+
+En soustrayant la fonction originale $y=x^4$, il nous reste : 
+\begin{align*}
+dy &= 4x^3\, dx, \\
+\end{align*}
+Et
+\begin{align*}
+\frac{dy}{dx} &= 4x^3.
+\end{align*}</p>
+
+<p><hr></p>
+
+<p>Ces premiers cas sont relativement simples. Essayons de résumer ce que nous avons trouvé pour voir si on pourrait en tirer une règle générale. Mettons-les en colonne, où la première montre la fonction originale et la deuxième la dérivée de la première. La colonne des fonctions s'appelle $y$ et celle des dérivées $\dfrac{dy}{dx}$, ainsi :
+\begin{align*}
+      \begin{array}{cc}
+               y & \frac{dy}{dx} \\ \hline
+               x^2 & 2x \\
+               x^3& 3x^2 \\
+               x^4 & 4x^3 \\
+               \hline
+     \end{array} 
+\end{align*}
+</p>
+
+<p><a name="diffrule1"/>Observons ces résultats dans un premier temps : l'opération de différentiation semble diminuer la puissance du $x$ de $1$. Par exemple dans le dernier cas on passe de $x^4$ à $x^3$. Et en même temps, on multiplie par un nombre. Ce nombre s'avère être la valeur de la puissance dans la fonction initiale. Maintenant que nous avons remarqués ceci, on peut formuler une conjecture pour dériver les autres puissances. On pourrait supposer que $x^5$ donne $5x^4$ comme dérivée, ou dériver $x^6$ donnerait $6x^5$. Si l'un de ces résultats ne vous convainc pas, essayez de le retrouver par le calcul. </p>
+
+<p>Essayons avec  $y = x^5$. <br>
+Alors :
+\begin{align*}
+y+dy &= (x+dx)^5     \\
+     &= x^5 + 5x^4\, dx + 10x^3(dx)^2  + 10x^2(dx)^3 \\
+     &\phantom{{}= x^5 + 5x^4\, dx} + 5x(dx)^4 + (dx)^5.
+\end{align*}
+
+<p>En négligeant toutes les quantités d'ordre de grandeur supérieur ou égal à deux, donnant : 
+
+\begin{align*}
+y + dy &= x^5 + 5x^4\, dx,  \\
+
+\end{align*}
+Puis en soustrayant : 
+\begin{align*}
+y &= x^5  \\
+\end{align*}
+Ce qui nous laisse : 
+\begin{align*}
+dy &= 5x^4\, dx,  \\
+\end{align*}
+Et donc : 
+\begin{align*}
+\frac{dy}{dx} &= 5x^4. 
+\end{align*}
+Exactement ce que nous avions supposés. 
+</p>
+
+<p><hr></p>
+
+<p>En suivant nos observations, nous pouvons conclure que si nous sommes confrontés à de plus grandes puissances, appelons la $n$ alors nous pouvons raisonner de la même façon. </p>
+
+<p> Soit $y = x^n,$ </p>
+<p>alors nous devrions nous attendre à trouver : </p>
+
+<p>$\frac{dy}{dx} = nx^{(n-1)}$.</p>
+
+<p>Par exemple, si $n=8$, alors $y = x^8$, ce qui donnera par différentiation : $\dfrac{dy}{dx} = 8x^7$.</p>
+
+<p>Finalement, la règle qui permet de différentier  $x^n$, qui donne  $nx^{n-1}$ est vraie dans tous les cas, où $n$ est un nombre entier positif. [Il s'agit de développer $(x + dx)^n$ à l'aide du binôme de Newton pour démontrer ceci.] Mais la question est de savoir si cela est aussi vrai lorsque $n$ est négatif. Ou même d’écriture fractionnaire. </p>
+
+<p>
+<em>Cas des puissances négatives.</em><p>
+Soit $y = x^{-2}$. et procédons comme auparavant : 
+\begin{align*}
+y+dy &= (x+dx)^{-2} \\
+     &= x^{-2} \left(1 + \frac{dx}{x}\right)^{-2}.
+\end{align*}
+
+En développant ceci à l'aide du binôme de Newton (voir <a href="14.html#binomtheo">ici</a>), nous avons : 
+\begin{align*}
+&=x^{-2} \left[1 - \frac{2\, dx}{x} +
+    \frac{2(2+1)}{1×2} \left(\frac{dx}{x}\right)^2 -
+    \text{etc.}\right]  \\
+&=x^{-2} - 2x^{-3} · dx + 3x^{-4}(dx)^2 - 4x^{-5}(dx)^3 + \text{etc.} \\
+\end{align*}
+
+En négligeant les quantités d'ordre supérieur on obtient : 
+\begin{align*}
+
+       y + dy &= x^{-2} - 2x^{-3} · dx.
+\end{align*}
+
+En soustrayant la fonction initiale de chaque coté de l'égalité :  $y = x^{-2}$, on trouve :
+\begin{align*}
+
+           dy &= -2x^{-3}dx,   \\
+\frac{dy}{dx} &= -2x^{-3}.
+\end{align*}
+Et c'est toujours en accord avec la règle énoncée au dessus. 
+
+<p>
+<em>Cas des puissances fractionnaires.</em><p>
+Soit $y= x^{\frac{1}{2}}$. Donc, comme auparavant : 
+
+\begin{align*}
+y+dy &= (x+dx)^{\frac{1}{2}} = x^{\frac{1}{2}} (1 + \frac{dx}{x} )^{\frac{1}{2}} \\
+
+     &= \sqrt{x} + \frac{1}{2} \frac{dx}{\sqrt{x}} - \frac{1}{8}
+        \frac{(dx)^2}{x\sqrt{x}} + \text{termes en puissances de $dx$.}
+\end{align*}
+
+<p>En soustrayant  $y = x^{\frac{1}{2}}$, et négligeant les ordre de grandeur supérieurs ) $dx$ :
+\[
+dy = \frac{1}{2} \frac{dx}{\sqrt{x}} = \frac{1}{2} x^{-\frac{1}{2}} · dx,
+\]
+et  $\dfrac{dy}{dx} = \dfrac{1}{2} x^{-\frac{1}{2}}$. Résultat conforme à la loi énoncée. 
+
+<p><em>Résumé.</em> Voyons ce que nous avons obtenus jusque-là. Nous sommes arrivés à la règle suivante :<a name="multipow"/> Pour différentier $x^n$, multiplier $x$ par sa puissance et la réduire de $1$ donnant : $nx^{n-1}$. Le résultat est que la dérivée de $x^n$ est $nx^{n-1}$. 
+
+<p>
+<a name="ex1"/>
+<hr><h3>Exercices I</h3>
+
+<p>Dériver les expressions suivantes :
+
+<p>(1) $y = x^{13}$
+<p>(2) $y = x^{-\frac{3}{2}}$
+<p>(3) $y = x^{2a}$
+<p>(4) $u = t^{2.4}$
+<p>(5) $z = \sqrt[3]{u}$
+<p>(6) $y = \sqrt[3]{x^{-5}}$
+<p>(7) $u = \sqrt[5]{\dfrac{1}{x^8}}$
+<p>(8) $y = 2x^a$
+<p>(9) $y = \sqrt[q]{x^3}$
+<p>(10) $y = \sqrt[n]{\dfrac{1}{x^m}}$
+
+<p><em>Vous savez maintenant dériver les puissances de $x$. Voyez comme finalement c'est facile! </em>
+
+<h3 class="answers">Réponses</h3>
+<p>(1)   $\dfrac{dy}{dx} = 13x^{12}$.
+<p>(2)   $\dfrac{dy}{dx} = - \dfrac{3}{2} x^{-\frac{5}{2}}$.
+<p>(3)   $\dfrac{dy}{dx} = 2ax^{(2a-1)}$.
+<p>(4)   $\dfrac{du}{dt} = 2.4t^{1.4}$.
+<p>(5)   $\dfrac{dz}{du} = \dfrac{1}{3} u^{-\frac{2}{3}}$.
+<p>(6)   $\dfrac{dy}{dx} = -\dfrac{5}{3}x^{-\frac{8}{3}}$.
+<p>(7)   $\dfrac{du}{dx} = -\dfrac{8}{5}x^{-\frac{13}{5}}$.
+<p>(8)   $\dfrac{dy}{dx} = 2ax^{a-1}$.
+<p>(9)   $\dfrac{dy}{dx} = \dfrac{3}{q} x^{\frac{3-q}{q}}$.
+<p>(10)   $\dfrac{dy}{dx} = -\dfrac{m}{n} x^{-\frac{m+n}{n}}$.
+<br>
+<hr>
+<a href="5-Etape-suivante-que-faire-des-constantes-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
+<a href="/">Index du document &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B32DJQB8BK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B32DJQB8BK');
+</script>
+</body>
+</html>
