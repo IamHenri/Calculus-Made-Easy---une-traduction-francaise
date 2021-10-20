@@ -11,3 +11,6 @@ Cet ouvrage contient un prologue, vingt-et-un chapitres, un épilogue et un page
 Dans cette traduction j'ai essayé de coller le plus au texte, avec pour objectif de retranscrire la limidité de ces explications. 
 
 Un grand didacticien ce Monsieur Thompson!
+
+La traduction est pour l'instant ici : 
+https://iamhenri.github.io/Calculus-Made-Easy---une-traduction-francaise/
