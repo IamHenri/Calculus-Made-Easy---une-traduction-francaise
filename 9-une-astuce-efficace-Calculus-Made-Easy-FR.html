@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Etape suivante : les constantes | Calculus Made Easy</title>
+<link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
+<style>
+body{counter-reset:h1 8}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Introduction d'une astuce utile</h1>
+<p class="a rotatedFloralHeartBullet"></p>
+
+<p>Il arrive, de temps en temps de tomber sur des expressions qui pourraient paraître trop compliquée à attaquer pour les dériver. 
+</p>
+
+<p>Ainsi, l'équation <a name="dodge"/>
+\[
+y = (x^2+a^2)^{\frac{3}{2}}
+\]
+peut paraître non évidente à un débutant. 
+</p>
+
+
+<p>A partir de là, diminuons la difficulté apparente de cette expression en faisant ceci : écrivons un symbole quelconque, $u$ par exemple, de manière à ce que $u$ soit égale à l'expression  $x^2 + a^2$; alors l'équation devient :
+\[
+y = u^{\frac{3}{2}},
+\]
+qui devient d'un coup facile à dériver, comme ceci : 
+\[
+\frac{dy}{du} = \frac{3}{2} u^{\frac{1}{2}}.
+\]
+Puis on regarde l'expression pour attaquer la dérivation : 
+\[
+u = x^2 + a^2,
+\]
+et de la dériver selon la variable $x$ : 
+\[
+\frac{du}{dx} = 2x.
+\]
+
+Ce qui suit maintenant est facile et sans problème (traduction au plus juste de l'anglais);
+\begin{align*}
+ \text{for}\;
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx}; \\
+ \text{that is,}\;
+\frac{dy}{dx}
+  &= \frac{3}{2} u^{\frac{1}{2}} × 2x \\
+  &= \tfrac{3}{2} (x^2 + a^2)^{\frac{1}{2}} × 2x \\
+  &= 3x(x^2 + a^2)^{\frac{1}{2}};
+\end{align*}
+Et ainsi l'astuce est expliquée.
+</p>
+
+<p>Dans un court moment, quand nous aurons vu comment gérer les sinus, cosinus, exponentiels, cette astuce se révèlera particulièrement intéressante. 
+</p>
+
+<p><hr></p>
+
+<p><p><p><em>Exemples</em> 
+Appliquons cette astuce à quelques exemples. 
+</p>
+
+
+<p><a name="ExNo1"/>
+(1) dériver  $y = \sqrt{a+x}$.
+</p>
+
+<p>Let $a+x = u$.
+\begin{align*}
+\frac{du}{dx} &= 1
+\end{align*}
+\begin{align*}
+\quad y=u^{\frac{1}{2}}
+\end{align*}
+\begin{align*}
+ \frac{dy}{du} = \tfrac{1}{2} u^{-\frac{1}{2}}\\
+ \frac{dy}{du} = \tfrac{1}{2} (a+x)^{-\frac{1}{2}}.\\
+\end{align*}
+\begin{align*}
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx} = \frac{1}{2\sqrt{a+x}}.
+\end{align*}
+</p>
+
+<p>(2) Dérivons  $y = \dfrac{1}{\sqrt{a+x^2}}$.
+</p>
+
+<p>Soit $a + x^2 = u$.
+\begin{align*}
+\frac{du}{dx} &= 2x ;
+\end{align*}
+\begin{align*}
+\quad y=u^{-\frac{1}{2}} ;
+\end{align*}
+\begin{align*}
+
+  \frac{dy}{du} = -\tfrac{1}{2}u^{-\frac{3}{2}} ;\\
+
+\end{align*}
+donc:
+\begin{align*}
+
+\frac{dy}{dx} &= \frac{dy}{du}×\frac{du}{dx} = - \frac{x}{\sqrt{(a+x^2)^3}}.
+\end{align*}
+</p>
+
+
+<p>(3) Dériver $y = \left(m - nx^{\frac{2}{3}} + \dfrac{p}{x^{\frac{4}{3}}}\right)^a$.
+</p>
+
+<p>Soit $m - nx^{\frac{2}{3}} + px^{-\frac{4}{3}} = u$.
+\begin{gather*}
+\frac{du}{dx} = -\tfrac{2}{3} nx^{-\frac{1}{3}} - \tfrac{4}{3} px^{-\frac{7}{3}};\\
+
+y = u^a;\quad \frac{dy}{du} = a u^{a-1}. \\
+
+\frac{dy}{dx} = \frac{dy}{du}×\frac{du}{dx}
+  = -a\left(m -nx^{\frac{2}{3}} + \frac{p}{x^{\frac{4}{3}}}\right)^{a-1}
+     (\tfrac{2}{3} nx^{-\frac{1}{3}} + \tfrac{4}{3} px^{-\frac{7}{3}}).
+\end{gather*}
+</p>
+
+<p>(4) Dériver $y=\dfrac{1}{\sqrt{x^3 - a^2}}$.
+</p>
+
+<p>Soit  $u = x^3 - a^2$.
+\begin{align*}
+\frac{du}{dx} &= 3x^2;\quad y = u^{-\frac{1}{2}};\quad
+  \frac{dy}{du}=-\frac{1}{2}(x^3 - a^2)^{-\frac{3}{2}}. \\
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx} = -\frac{3x^2}{2\sqrt{(x^3 - a^2)^3}}.
+\end{align*}
+</p>
+
+<p><a name="examples4"/>
+(5) Dériver $y=\sqrt{\dfrac{1-x}{1+x}}$.
+</p>
+
+<p>Réécrire cette expression comme ceci : $y=\dfrac{(1-x)^{\frac{1}{2}}}{(1+x)^{\frac{1}{2}}}$.
+\[
+\frac{dy}{dx}
+  = \frac{(1+x)^{\frac{1}{2}}\, \dfrac{d(1-x)^{\frac{1}{2}}}{dx}
+        - (1-x)^{\frac{1}{2}}\, \dfrac{d(1+x)^{\frac{1}{2}}}{dx}}{1+x}.
+\]
+</p>
+
+<p>(On pourrait aussi écrire $y = (1-x)^{\frac{1}{2}} (1+x)^{-\frac{1}{2}}$ et le dériver comme un produit.)
+</p>
+
+
+<p>En procédant comme dans l'exemple (1) ci-dessus: 
+\[
+\frac{d(1-x)^{\frac{1}{2}}}{dx} = -\frac{1}{2\sqrt{1-x}};
+\quad\text{and}\quad
+\frac{d(1+x)^{\frac{1}{2}}}{dx} = \frac{1}{2\sqrt{1+x}}.
+\]
+</p>
+
+<p>Par conséquent
+\begin{align*}
+\frac{dy}{dx}
+  &= - \frac{(1 + x)^{\frac{1}{2}}}{2(1 + x)\sqrt{1-x}}
+     - \frac{(1 - x)^{\frac{1}{2}}}{2(1 + x)\sqrt{1+x}} \\
+  &= - \frac{1}{2\sqrt{1+x}\sqrt{1-x}} - \frac{\sqrt{1-x}}{2 \sqrt{(1+x)^3}};\\
+\end{align*}
+ or
+\begin{align*}
+\frac{dy}{dx}
+  &= - \frac{1}{(1+x)\sqrt{1-x^2}}.
+\end{align*}
+</p>
+
+<p>(6) Dériver  $y = \sqrt{\dfrac{x^3}{1+x^2}}$.
+</p>
+
+<p>On peut réécrire coomme ceci : 
+\begin{gather*}
+y = x^{\frac{3}{2}}(1+x^2)^{-\frac{1}{2}}; \\
+\frac{dy}{dx}
+  = \tfrac{3}{2} x^{\frac{1}{2}}(1 + x^2)^{-\frac{1}{2}}
+  + x^{\frac{3}{2}} × \frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx}.
+\end{gather*}
+</p>
+
+<p>Dériver  $(1+x^2)^{-\frac{1}{2}}$, comme montré dans l'exemple (2) ci-dessus on a :
+\[
+\frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx} = - \frac{x}{\sqrt{(1+x^2)^3}};
+\]
+et donc : 
+\[
+\frac{dy}{dx}
+  = \frac{3\sqrt{x}}{2\sqrt{1+x^2}} - \frac{\sqrt{x^5}}{\sqrt{(1+x^2)^3}}
+  = \frac{\sqrt{x}(3+x^2)}{2\sqrt{(1+x^2)^3}}.
+\]
+</p>
+
+
+<p>(7) Dériver  $y=(x+\sqrt{x^2+x+a})^3$.
+</p>
+
+<p>Soit : $x+\sqrt{x^2+x+a}=u$.
+\begin{gather*}
+\frac{du}{dx} = 1 + \frac{d\bigl[(x^2+x+a)^{\frac{1}{2}}\bigr]}{dx}. \\
+y = u^3;\quad\text{and}\quad \frac{dy}{du} = 3u^2= 3\left(x+\sqrt{x^2+x+a}\right)^2.
+\end{gather*}
+</p>
+
+<p>Maintenant soient  $(x^2+x+a)^{\frac{1}{2}}=v$ et $(x^2+x+a) = w$.
+\begin{align*}
+\frac{dw}{dx}
+  &= 2x+1;\quad v = w^{\frac{1}{2}};\quad \frac{dv}{dw} = \tfrac{1}{2}w^{-\frac{1}{2}}. \\
+\frac{dv}{dx}
+  &= \frac{dv}{dw} × \frac{dw}{dx} = \tfrac{1}{2}(x^2+x+a)^{-\frac{1}{2}}(2x+1). \\
+\end{align*}
+   par conséquent : 
+\begin{align*}
+\frac{du}{dx}
+  &= 1 + \frac{2x+1}{2\sqrt{x^2+x+a}}, \\
+\frac{dy}{dx}
+  &= \frac{dy}{du} × \frac{du}{dx}\\
+  &= 3\left(x+\sqrt{x^2+x+a}\right)^2
+      \left(1 +\frac{2x+1}{2\sqrt{x^2+x+a}}\right).
+\end{align*}
+</p>
+
+<p>(8) Dériver $y=\sqrt{\dfrac{a^2+x^2}{a^2-x^2}} \sqrt[3]{\dfrac{a^2-x^2}{a^2+x^2}}$.
+</p>
+
+<p>On obtient : 
+\begin{align*}
+y &= \frac{(a^2+x^2)^{\frac{1}{2}} (a^2-x^2)^{\frac{1}{3}}}
+          {(a^2-x^2)^{\frac{1}{2}} (a^2+x^2)^{\frac{1}{3}}}
+  = (a^2+x^2)^{\frac{1}{6}} (a^2-x^2)^{-\frac{1}{6}}. \\
+\frac{dy}{dx}
+  &= (a^2+x^2)^{\frac{1}{6}} \frac{d\bigl[(a^2-x^2)^{-\frac{1}{6}}\bigr]}{dx}
+   + \frac{d\bigl[(a^2+x^2)^{\frac{1}{6}}\bigr]}{(a^2-x^2)^{\frac{1}{6}}\, dx}.
+\end{align*}
+</p>
+
+<p>Soient $u = (a^2-x^2)^{-\frac{1}{6}}$ et $v = (a^2 - x^2)$.
+\begin{align*}
+u &= v^{-\frac{1}{6}};\quad
+  \frac{du}{dv} = -\frac{1}{6}v^{-\frac{7}{6}};\quad
+  \frac{dv}{dx} = -2x. \\
+
+\frac{du}{dx} &= \frac{du}{dv} × \frac{dv}{dx} = \frac{1}{3}x(a^2-x^2)^{-\frac{7}{6}}.
+\end{align*}
+</p>
+
+<p>Soient  $w = (a^2 + x^2)^{\frac{1}{6}}$ et $z = (a^2 + x^2)$.
+\begin{align*}
+w &= z^{\frac{1}{6}};\quad
+  \frac{dw}{dz} = \frac{1}{6}z^{-\frac{5}{6}};\quad
+  \frac{dz}{dx} = 2x. \\
+
+\frac{dw}{dx} &= \frac{dw}{dz} × \frac{dz}{dx} = \frac{1}{3} x(a^2 + x^2)^{-\frac{5}{6}}.
+\end{align*}
+</p>
+
+<p>Par conséquent : 
+\begin{align*}
+\frac{dy}{dx}
+  &= (a^2+x^2)^{\frac{1}{6}} \frac{x}{3(a^2-x^2)^{\frac{7}{6}}}
+   + \frac{x}{3(a^2-x^2)^{\frac{1}{6}} (a^2+x^2)^{\frac{5}{6}}}; \\
+\end{align*}
+
+ ou
+\begin{align*}
+\frac{dy}{dx}
+  &= \frac{x}{3}
+     \left[\sqrt[6]{\frac{a^2+x^2}{(a^2-x^2)^7}}
+           + \frac{1}{\sqrt[6]{(a^2-x^2)(a^2+x^2)^5]}} \right].
+\end{align*}
+</p>
+
+<p>(9) Dériver  $y^n$ selon  $y^5$.
+\[
+\frac{d(y^n)}{d(y^5)} = \frac{ny^{n-1}}{5y^{5-1}} = \frac{n}{5} y^{n-5}.
+\]
+</p>
+
+<p>
+(10)<a name="Example10"/> Trouver les dérivées première et seocnde de $y = \dfrac{x}{b} \sqrt{(a-x)x}$.
+\[
+\frac{dy}{dx}
+  = \frac{x}{b}\,
+    \frac{d\bigl\{\bigl[(a-x)x\bigr]^{\frac{1}{2}}\bigr\}}{dx}
+  + \frac{\sqrt{(a-x)x}}{b}.
+\]
+</p>
+
+<p>Soient $\bigl[(a-x)x\bigr]^{\frac{1}{2}} = u$ et soit $(a-x)x = w$; alors $u = w^{\frac{1}{2}}$.
+\[
+\frac{du}{dw}
+  = \frac{1}{2} w^{-\frac{1}{2}}
+  = \frac{1}{2w^{\frac{1}{2}}} = \frac{1}{2\sqrt{(a-x)x}}.
+\]
+
+\begin{align*}
+&\frac{dw}{dx} = a-2x.\\
+&\frac{du}{dw} × \frac{dw}{dx} = \frac{du}{dx} = \frac{a-2x}{2\sqrt{(a-x)x}}.
+\end{align*}
+</p>
+
+<p>Par conséquent : 
+\[
+\frac{dy}{dx}
+  = \frac{x(a-2x)}{2b\sqrt{(a-x)x}} + \frac{\sqrt{(a-x)x}}{b}
+  = \frac{x(3a-4x)}{2b\sqrt{(a-x)x}}.
+\]
+
+</p>
+<p>Maintenant 
+\begin{align*}
+\frac{d^2y}{dx^2}
+  &= \frac{2b \sqrt{(a-x)x}\, (3a-8x)
+           - \dfrac{(3ax-4x^2)b(a-2x)}{\sqrt{(a-x)x}}}
+          {4b^2(a-x)x} \\
+  &= \frac{3a^2-12ax+8x^2}{4b(a-x)\sqrt{(a-x)x}}.
+\end{align*}
+
+</p>
+
+<p>(Nous aurons besoin de ces dérivées première et seconde plus tard. Voir <a href="12.html#ex10">Chapitre XII, Exercice 11</a>)
+</p>
+
+<p>
+<a name="ex6"/>
+<hr><h3>Exercices VI</h3>
+</p>
+
+<p>Dériver les expressions suivantes :
+</p>
+
+<p>
+</p>
+<p>(1) $y = \sqrt{x^2 + 1}$.
+</p>
+<p>(2) $y = \sqrt{x^2+a^2}$.
+</p>
+<p>(3) $y = \dfrac{1}{\sqrt{a+x}}$.
+</p>
+<p>(4) $y = \dfrac{a}{\sqrt{a-x^2}}$.
+</p>
+<p>(5) $y = \dfrac{\sqrt{x^2-a^2}}{x^2}$.
+</p>
+<p>(6) $y = \dfrac{\sqrt[3]{x^4+a}}{\sqrt[2]{x^3+a}}$.
+</p>
+<p>(7) $y = \dfrac{a^2+x^2}{(a+x)^2}$.
+</p>
+<p>(8) Dériver  $y^5$ selon $y^2$.
+</p>
+<p>(9) Dériver $y = \dfrac{\sqrt{1 - \theta^2}}{1 - \theta}$.
+</p>
+
+<p><h3 class="answers">Réponses</h3>
+</p>
+
+<p>(1)   $\dfrac{x}{\sqrt{ x^2 + 1}}$.
+</p>
+<p>(2)   $\dfrac{x}{\sqrt{ x^2 + a^2}}$.
+</p>
+<p>(3)   $- \dfrac{1}{2 \sqrt{(a + x)^3}}$.
+</p>
+
+
+<p>(4)   $\dfrac{ax}{\sqrt{(a - x^2)^3}}$.
+</p>
+<p>(5)   $\dfrac{2a^2 - x^2}{x^3 \sqrt{ x^2 - a^2}}$.
+</p>
+
+
+<p>(6)   $ \dfrac{\frac{3}{2} x^2 \left[ \frac{8}{9} x \left( x^3 + a \right) - \left( x^4 + a \right) \right]}{(x^4 + a)^{\frac{2}{3}} (x^3 + a)^{\frac{3}{2}}}$
+</p>
+<p>(7)   $\dfrac{2a \left(x - a \right)}{(x + a)^3}$.
+</p>
+
+
+<p>(8)   $\frac{5}{2} y^3$.
+</p>
+<p>(9)   $\dfrac{1}{(1 - \theta) \sqrt{1 - \theta^2}}$.
+</p>
+
+<hr>
+
+<p>Ce processus  peut être étendu pour décomposer une expression selon plus d'une variable, par exemple : $\dfrac{dy}{dx} = \dfrac{dy}{dz} × \dfrac{dz}{dv} × \dfrac{dv}{dx}$.
+</p>
+
+<p>
+</p>
+<p><em>Exemples</em>
+(1) Si $z = 3x^4$;&nbsp;&nbsp; $v = \dfrac{7}{z^2}$;&nbsp;&nbsp; $y =\sqrt{1+v}$, trouver $\dfrac{dv}{dx}$.
+</p>
+
+<p>On a
+\begin{align*}
+\frac{dy}{dv} &= \frac{1}{2\sqrt{1+v}};\quad
+\frac{dv}{dz} = -\frac{14}{z^3};\quad
+\frac{dz}{dx} = 12x^3. \\
+
+\frac{dy}{dx} &= -\frac{168x^3}{(2\sqrt{1+v})z^3}
+               = -\frac{28}{3x^5\sqrt{9x^8+7}}.
+\end{align*}
+</p>
+
+<p>(2) Si $t = \dfrac{1}{5\sqrt{\theta}}$;&nbsp;&nbsp; $x = t^3 + \dfrac{t}{2}$;&nbsp;&nbsp; $v = \dfrac{7x^2}{\sqrt[3]{x-1}}$, trouver $\dfrac{dv}{d\theta}$.
+
+\[
+\frac{dv}{dx} = \frac{7x(5x-6)}{3\sqrt[3]{(x-1)^4}};\quad
+\frac{dx}{dt} = 3t^2 + \tfrac{1}{2};\quad
+\frac{dt}{d\theta} = -\frac{1}{10\sqrt{\theta^3}}. 
+\]
+ Hence :
+\[
+\frac{dv}{d\theta}
+  = -\frac{7x(5x-6)(3t^2+\frac{1}{2})}
+          {30\sqrt[3]{(x-1)^4} \sqrt{\theta^3}},
+\]
+une expression dans laquelle $x$ doit être remplacé par sa valeur et $t$ par ses valeurs en termes de  $\theta$.
+</p>
+
+<p>(3) Si $\theta = \dfrac{3a^2x}{\sqrt{x^3}}$;&nbsp;&nbsp; $\omega = \dfrac{\sqrt{1-\theta^2}}{1+\theta}$;&nbsp;&nbsp; et $\phi = \sqrt{3} - \dfrac{1}{\omega\sqrt{2}}$, trouver $\dfrac{d\phi}{dx}$.
+</p>
+
+
+<p>On a : 
+\begin{gather*}
+\theta = 3a^2x^{-\frac{1}{2}};\quad
+\omega = \sqrt{\frac{1-\theta}{1+\theta}};\quad \text{and}\quad
+\phi = \sqrt{3} - \frac{1}{\sqrt{2}} \omega^{-1}. \\
+\frac{d\theta}{dx} = -\frac{3a^2}{2\sqrt{x^3}};\quad
+\frac{d\omega}{d\theta} = -\frac{1}{(1+\theta)\sqrt{1-\theta^2}}
+\end{gather*}
+(voir exemple 5, <a href="9.html#examples4">ici</a>); et 
+\[
+\frac{d\phi}{d\omega} = \frac{1}{\sqrt{2}\omega^2}.
+\]
+</p>
+
+<p>Donc on a que $\dfrac{d\theta}{dx} = \dfrac{1}{\sqrt{2} × \omega^2}
+  × \dfrac{1}{(1+\theta) \sqrt{1-\theta^2}}
+  × \dfrac{3a^2}{2\sqrt{x^3}}$.
+</p>
+
+<p>On rempalce premièrement $\omega$, puis $\theta$ par ses valeurs.
+
+<p>
+<hr><h3>Exercices VII</h3>
+Vous pouvez essayer ces exercices suivants :
+</p>
+
+<p>(1) Si $u = \frac{1}{2}x^3$;&nbsp;&nbsp;$v = 3(u+u^2)$;&nbsp;&nbsp; et $w = \dfrac{1}{v^2}$, trouver $\dfrac{dw}{dx}$.
+</p>
+
+<p>(2) Si $y = 3x^2 + \sqrt{2}$;&nbsp;&nbsp;$z = \sqrt{1+y}$;&nbsp;&nbsp; et  $v = \dfrac{1}{\sqrt{3}+4z}$,
+trouver  $\dfrac{dv}{dx}$.
+</p>
+
+<p>(3) Si $y = \dfrac{x^3}{\sqrt{3}}$;&nbsp;&nbsp;$z = (1+y)^2$;&nbsp;&nbsp; et  $u = \dfrac{1}{\sqrt{1+z}}$, trouver $\dfrac{du}{dx}$.
+</p>
+
+
+<p><h3 class="answers">Réponses</h3>
+</p>
+
+<p>(1)   $\dfrac{dw}{dx} = \dfrac{3x^2 \left( 3 + 3x^3 \right)} {27 \left(\frac{1}{2} x^3 + \frac{1}{4} x^6 \right)^3}$.
+</p>
+
+<p>(2)   $\dfrac{dv}{dx} = - \dfrac{12x}{\sqrt{1 + \sqrt{2} + 3x^2} \left(\sqrt{3} + 4 \sqrt{1 + \sqrt{2} + 3x^2}\right)^2}$.
+</p>
+
+<p>(3)   $\dfrac{du}{dx} = - \dfrac{x^2 \left(\sqrt{3} + x^3 \right)} {\sqrt{ \left[ 1 + \left( 1 + \dfrac{x^3}{\sqrt{3}} \right) ^2 \right]^3}} $
+</p>
+<p>
+</p>
+<br>
+<hr>
+<a href="10-signification-geometrique-de-la-differentiation-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
