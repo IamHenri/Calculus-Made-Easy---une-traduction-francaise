@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Sur les différents degrés de petitesse | Calculus Made Easy</title>
+<link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
+<style>
+body{counter-reset:h1 2}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Différentes échelles de petitesse</h1>
+<p class="a rotatedFloralHeartBullet"></p>
+
+<p>On s'aperceva qu'aux cours des différents calculs que nous allons mener, nous aurons à gérer de petites quantités, où la petitesse dépendra des échelles choisies. </p>
+
+<p>Nous allons aussi voir sous quelles circonstances nous pouvons considérer de petites quantités si minimes que l'on ne pourrait même pas les considérer. Toute petitesse est relative. </p>
+
+<p>Avant de donner des règles et autres lois mathématiques, analysons un cas familier. Il y a $60$ minutes dans une heure, $24$ heures dans une journée et $7$ jours dans une semaine. Il y a par conséquent $1440$ minutes dans une journée et $10080$ minutes dans une semaine. </p>
+
+<p>Evidemment $1$ minute est une quantité très petite comparé à une semaine entière. En particuliers nos 
+aïeux considéraient une minute petite par rapport à une heure. Ils l'appelèrent d'ailleurs "une minute", valant un soixantième d'une heure. NDT : en anglais minute veut aussi dire petit. Dans le texte original il y a un jeu de mot entre la minute comme subdivision de l'heure et le fait que cela veuille dire petit. En soi le texte original est tourné de manière humoristique, impossible à retranscrire ici.  </p>
+
+<p>Quand finalement ils eurent besoin de quantité de temps plus petites, ils divisèrent une minute en $60$ petites parties égales, qui plus tard furent appelées "second minùtes" (<em>i.e.:</em> des petites quantité du second ordre, le premier étant celui de la minute). Maintenant, on appelle ces petites quantités des secondes.  </p>
+
+<p>A partir de là, si une minute est si petite par rapport à une journée, une seconde devient beaucoup plus petite par comparaison!</p>
+
+<p>NDT : ce paragraphe est basé sur la monnaie anglaise avant 1961. En résumé une livre (pound sterling) c'est 960 farthing, ou 48 schillings. 
+Donc si on compare un farthing à une livre, on voit qu'il y a un rapport de presque $\frac{1}{1000}$. Un farthing a finalement que peu d'importance par rapport à une livre : il peut être vu comme une quantité négligeable, comparativement. 
+Maintenant si on compare un farthing avec £$1000$ : au regard de cette somme, le farthing devient négligeable. Entre le farthing et la livre il y a un rapport de presque $1000$ et entre une livre et £$1000$ il y a encore un rapport de $1000$. De la même manière, une livre même en or, est négligeable par rapport à la fortune d'un millionnaire (en livre c'est beaucoup à l'époque. Les millionnaires du début du vingtième siècle étaient les Jeff Bezos et Elon Musk de l'époque). </p>
+
+<p>On peut maintenant poser une fraction numérique dont le rapport donne un résultat petit, par rapport à ce que l'on observe. On va se baser sur cette fraction pour définir un ordre de petitesse (un ordre de grandeur mais pour des petites choses). On peut facilement trouver d'autres fractions dont le rapport sera plus petit, mais pour l'instant on se fixe une fraction dont le résultat est sensiblement petit. Une sorte de référence de ce qui est petit.  
+
+Par exemple dans le contexte du temps, $\frac{1}{60}$ peut être appelée petite fraction. Ensuite, si on prend  $\frac{1}{60}$ de $\frac{1}{60}$ (On peut voir ça comme une <em>petite</em> fraction d'une <em>petite</em> fraction ) peut être vu comme une  <em>petite quantité du second ordre</em><a name="smallness"/> de petitesse.*
+
+<p><note>*Les mathématiciens parlent du deuxième ordre de “grandeur”. Magnitude en anglais NDT.
+ Ce qui signifie ici le deuxième ordre de  <em>petitesse</em>. Ce qui peut être source de confusion quand on découvre ces concepts.</note>
+
+<p>Ou, pour toute autre fin, on prendrait $1$ pour cent.  (<em>i.e.:</em> $\frac{1}{100}$) comme une <em>petite</em> fraction, soit $1$ pour cent. Et on prend à nouveau une fraction de cette fraction soit $\frac{1}{100}$ de $\frac{1}{100}$.  (<em>i.e.:</em> $\frac{1}{10,000}$) serait alors une fraction d'un second ordre de grandeur, ou plutôt du second ordre de petitesse. ;et $\frac{1}{1,000,000}$ serait une petite fraction du troisième ordre : étant $\frac{1}{100}$ de $\frac{1}{100}$ de $\frac{1}{100}$. 
+</p>
+<a id="fn1-top">
+
+<p>Pour finir, supposons que dans un cas bien particulier, on voit $\frac{1}{1,000,000}$ comme  “petit.”  Maintenant si un chronomètre de grande qualité mesure le temps avec une précision de $1$ pour $1,051,200$. Donc, dans un tel contexte, on peut voir que  $\frac{1}{1,000,000}$ (ou un millionième) comme une petite quantité, alors $\frac{1}{1,000,000}$ de $\frac{1}{1,000,000}$, qui donne $\frac{1}{1,000,000,000,000}$ (ou un mille-milliardième) sera une petite quantité du second ordre de grandeur (de petitesse) et peut être négligé par comparaison. </p>
+
+
+<p>On voit alors que plus une petite quantité est petite, plus la quantité du second ordre est négligeable. Ainsi on voit que  <em>dans tous les cas il est justifié de négliger les quantités du second ou troisième ordre, ou tout ordre supérieur </em>, seulement si on prend les quantité du premier ordre suffisamment petites.</p>
+
+<p>Mais, il faut se rappeler que de petites quantités, si elles apparaissent dans nos expressions en tant que facteurs multipliés par un autre facteur, peuvent devenir importantes si l'autre facteur est lui-même grand. Même un centime devient important si il est multiplié par quelques centaines.</p>
+
+
+
+<p>Maintenant en calcul infinitésimal, on écrit $dx$ pour un petit morceau de $x$. Ces éléments tels que $dx$, et $du$, et $dy$, sont appelés “différentielles,” la différentielle de $x$, de $u$ ou de $y$, selon les cas.  [Il faut <em>lire</em> ces expressions comme ceci
+<em>dé-iks</em>, ou <em>dé-u</em>, or <em>dé-y</em>.] Si $dx$  est un petit porceau de  $x$, suffisamment petit,  il ne s'ensuit pas forcément que les quantités  $x · dx$, ou $x^2\, dx$, ou $a^x\, dx$ sont négligeables. Mais $dx × dx$ est négligeable, étant une quantité du second ordre. </p>
+
+<p>Un très simple exemple en guise d'illustration</p>
+
+<p>Soit $x$ une quantité qui peut augmenter. Elle augmente en ajoutant de petits montants pour devenir  $x + dx$, ou $dx$ est un petit incrément que l'on ajoute en l'additionnant à $x$. Le carré de ceci donne  $x^2 + 2x · dx + (dx)^2$. Le second terme st non négligeable car est une quantité du premier ordre ; alors que le troisième terme est du second ordre de grandeur (petitesse), étant une petite partie d'une petite partie de $x^2$. Donc si on donne à $dx$ une valeur numérique, disons, $\frac{1}{60}$ de $x$, alors le second terme serait  $\frac{2}{60}$ de $x^2$, et le troisième et dernier terme serait  $\frac{1}{3600}$ de $x^2$. Ce dernier terme est clairement moins important que le second. Mais si on va un peu plus loin et que l'on prend $dx$ qui vaudrait seulement   $\frac{1}{1000}$ de $x$, alors le second terme serait   $\frac{2}{1000}$ de  $x^2$, alors que le troisième vaudrait seulement  $\frac{1}{1,000,000}$ de $x^2$.
+
+<p><a name="figure1">
+<img src="https://calculusmadeeasy.org/33283-t/images/018a.pdf.png-1.png">
+
+<p><a name="figure2">
+<img src="https://calculusmadeeasy.org/33283-t/images/019a.pdf.png-1.png">
+
+
+<p>Géométriquement on pourrait décrire cela comme suit : Dessiner un carré (<a href="#figure1">Figure 1</a>) dont le coté est de longueur $x$. Maintenant supposons que l'on agrandisse le carré en ajoutant à chaque coté la longueur $dx$. Le carré ainsi agrandi est composé du carré original   $x^2$, de deux rectangles en haut et à droite du carré, dont l'aire de chacun est donnée par   $x · dx$ (ou si on ajoute les deux ensemble 
+$2x · dx$), et le petit carré en haut à droite qui vaut $(dx)^2$. Dans  <a href="#figure2">Figure 2</a> nous avons pris $dx$ comme une partie significative de $x$ –environ $\frac{1}{5}$. Mais supposons que nous ayons pris seulement $\frac{1}{100}$– environ l'épaisseur d'une ligne dessinée au stylo à encre. Alors le petit coin aura une aire de seulement $\frac{1}{10,000}$ de $x^2$, et sera pratiquement invisible. Clairement $(dx)^2$ est négligeable, mais seulement si on fait en sorte que l'incrément $dx$ soit suffisamment petit. <a name="figure3"></p>
+<img src="https://calculusmadeeasy.org/33283-t/images/019b.pdf.png-1.png">
+
+<p>Considérons une situation similaire.</p>
+
+<p>
+Supposons qu'un millionnaire dise à son ou sa secrétaire : la semaine prochaine, je vous donnerai une petite fraction de tout l'argent que je recevrai. Supposons que le
+secrétaire dise ensuite à son enfant : je te donnerai un
+petite fraction de ce que je reçois. Supposons que la fraction
+dans chaque cas soit $\frac{1}{100}$. Maintenant, si M. Millionnaire a reçu au cours de la semaine suivante £$1000$, la secrétaire recevrait £$10$ et l'enfant $2$ shillings. Dix livres sont une petite quantité par rapport à £$1000$; mais deux shillings est une minuscule quantité, comparativement, étant du second ordre par rapport aux £$1 000$.  Mais qu'est-ce que cela changerait si la fraction étaient plus petite, au lieu d'être $\frac{1}{100}$, on aurait pris $\frac{1}{1000}$ ? La réponse est simple, pendant que M. Millionnaire a obtenu son £ $1000$, M. Secrétaire aurait obtenu seulement £$1$, et l'enfant moins d'un farthing !</p>
+
+<p>Le très spirituel Dean Swift*
+écrivit un jour:</p>
+<blockquote><pre>
+So, Nat'ralists observe, a Flea
+Hath smaller Fleas that on him prey.
+And these have smaller Fleas to bite 'em,
+And so proceed ad infinitum." </pre>
+</blockquote>
+  <p><note><em>*On Poetry: a Rhapsody</em> (p. 20), printed 1733–usually misquoted.</note></p>
+
+<p>Un bœuf  peut très bien être ennuyé par des mouches ordinaires -petites créatures du premier ordre de grandeur (petitesse). Mais il ne serait probablement pas dérangé par la mouche d'une mouche; cette toute petite mouche étant du second ordre de grandeur par rapport au bœuf . Cette mouche de mouche est négligeable. Même une nuée de mouches de mouche resteraient invisibles pour le bœuf . </p>
+<br>
+<hr>
+<a href="3-Croissances-relatives-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
