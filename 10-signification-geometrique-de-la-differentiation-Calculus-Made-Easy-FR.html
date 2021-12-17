@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Etape suivante : les constantes | Calculus Made Easy</title>
+<title>Signification géométrique de la petitesse des dérivées | Calculus Made Easy</title>
 <link rel="stylesheet" href="https://calculusmadeeasy.org/screen.css">
 <style>
 body{counter-reset:h1 10}
@@ -13,11 +13,11 @@ body{counter-reset:h1 10}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>Signification géométrique de la petitesse des dérivées</h1>
+<h1><br>Signification géométrique des dérivées</h1>
 <p class="a rotatedFloralHeartBullet">
 
 
-<p>Il est utile de considérer la signification géométrique des coefficients différentiels et dérivée. (On appelle coefficient différentiel le nombre dérivé d'une fonction NDT)
+<p>Comprendre la signification géométrique de la dérivée, du nombre dérvée ou coefficients différentiels est fondamental pour faire le lien entre cette théorie et les aspects géométriques. (Coefficient différentiel et nombre dérivé ont la même signification, mais le premier est moins utilisé de nos jours NDT)
 </p>
 
 <p>Premièrement, n'importe quelle fonction de $x$, comme par exemple $x^2$, ou $\sqrt{x}$, ou $ax+b$, peuvent être représentées sous forme de courbes; et normalement de nos jours, chaque élève de terminale sait tracer une courbe (NDT sachez qu'aujourd'hui la méthode est bien différente par rapport à 1910, simplement se dire qu'il n'y avait pas de calculatrices est parlant). 
@@ -27,67 +27,52 @@ body{counter-reset:h1 10}
 <img src="https://calculusmadeeasy.org/33283-t/images/088a.pdf.png-1.png">
 </p>
 
-<p>Soit  $PQR$, dans  <a href="#figure7">Figure 7</a>, une portion de la courbe tracée à l'aide des axes $OX$ et $OY$. Considérons n'importe quel point $Q$ sur cette courbe, où l'abscisse du point est $x$ et son ordonnée est $y$. Maintenant observons comment $y$ change selon les variations de $x$. Si on modifie  $x$ en l'incrémentant d'un petit $dx$, à droite,on observera que $y$ aussi (particulièrement sur <em>cette</em> courbe) sera augmenté d'un petit $dy$ (car cette courbe a la particularité d'être croissante à l'endroit où on l'observe). Alors le rapport de $dy$ sur $dx$ est une mesure de la mesure dans laquelle la courbe croît entre les deux points $Q$ et $T$. En particulier on peut voir que les valeurs de la pente de la courbe entre $Q$ et $T$ sont très différentes. Donc on ne peut pas vraiment parler de la <a name="slope"/> pente de la courbe entre $Q$ et $T$. Si toutefois $Q$ et $T$ sont si proche l'un de l'autre que la petite portion $QT$ de la courbe est proatiquement droite, alors, on peut dire que le ratio $\dfrac{dy}{dx}$ est la courbe de la portion de courbe $QT$. La ligne droite $QT$ résultante est en contact avec la courbe le long de la portion de courbe $QT$, seulement. Et si la portion de la courbe est infiniment petite alors la ligne droite ne touchera la courbe presque en un seul point et sera par conséquent la <em>tangente</em> à la courbe. 
+<p>Soit  $PQR$, dans  <a href="#figure7">Figure 7</a>, une portion de la courbe tracée à l'aide des axes $OX$ et $OY$. Considérons n'importe quel point $Q$ sur cette courbe, où l'abscisse du point est $x$ et son ordonnée est $y$. Maintenant observons comment $y$ varie selon  $x$. Si on modifie  $x$ en l'incrémentant d'un petit $dx$, à droite,on observera que $y$ (particulièrement sur <em>cette</em> courbe) sera aussi augmenté d'un petit $dy$ (car cette courbe a la particularité d'être croissante à l'endroit où on l'observe). Alors le rapport de $dy$ sur $dx$ est une mesure de la variation (croissance / décroissance) de la courbe entre ces deux points $Q$ et $T$ (<span title="Note du traducteur">NDT</span> $T$ est le point de coordonnées $(x+dx;y+dy)$). En particulier on peut voir que les valeurs de la pente de la courbe entre $Q$ et $T$ sont très différentes. Donc on ne peut pas vraiment parler de la <a name="slope"/> pente de la courbe entre $Q$ et $T$. Si toutefois $Q$ et $T$ sont si proche l'un de l'autre que la petite portion $QT$ de la courbe est pratiquement droite, alors, on peut dire que le ratio $\dfrac{dy}{dx}$ est la courbe de la portion de courbe $QT$. La ligne droite $QT$ résultante est en contact avec la courbe $QT$ en deux points seulement. Et si la portion de la courbe est infiniment petite alors la ligne droite ne touchera la courbe presque en un seul point et sera par conséquent la <em>tangente</em> à la courbe. 
 </p>
 
-<p>This tangent to the curve has evidently the same
-slope as $QT$, so that $\dfrac{dy}{dx}$ is the slope of the tangent to
-the curve at the point $Q$ for which the value of $\dfrac{dy}{dx}$ is
-found.
+<p>Cette tangente à la courbe a évidemment la même pente que $QT$. Donc   $\dfrac{dy}{dx}$ est la pente de la tangente à la courbe au point $Q$. Chercher la pente d'une courbe c'est chercher la valeur de   $\dfrac{dy}{dx}$.
+</p>
 
-<p>We have seen that the short expression “the slope
-of a curve” has no precise meaning, because a curve
-has so many slopes–in fact, every small portion of a
-curve has a different slope. “The slope of a curve <em>at
-a point</em>” is, however, a perfectly defined thing; it is
 
-the slope of a very small portion of the curve situated
-just at that point; and we have seen that this is the
-same as “the slope of the tangent to the curve at that
-point.”
+<p>On voit donc que l'expression la pente d'une courbe ne veut rien dire de particulier, car une courbe a une infinité de pentes, une courbe a tellement de pente que chaque petite portion de courbe a une différente pente.  “La pente d'une courbe  <em>en un point</em>”  est en revanche parfaitement cohérent et possède un sens précis ; C'est la pente d'un très petite portion de courbe située en ce point ; et nous avons vu que c'est la même chose que  “la pente de la tangente à la courbe en ce point.”</p>
 
-<p>Observe that $dx$ is a short step to the right, and
-$dy$ the corresponding short step upwards. These
-steps must be considered as short as possible–in fact
-indefinitely short,–though in diagrams we have to
-represent them by bits that are not infinitesimally
-small, otherwise they could not be seen.
+<p>
+  Observons que $dx$ est un court déplacement vers la droite et $dy$ un court déplacement vers le haut. Ces déplacements doivent être le plus petits possibles - en fait infiniment petits - alors que dans les schémas nous avons à les représenter de telle manière que ces déplacements ne semblent pas infiniment petits, car sinon on ne pourrait pas les voir (NDT : c'est beaucoup plus drôle en Anglais)
+  </p>
 
-<p><em>We shall hereafter make considerable use of this
-circumstance that $\dfrac{dy}{dx}$ represents the slope of the curve
-at any point.</em>
+<p><em>Nous allons par la suite faire un usage considérable du fait que  $\dfrac{dy}{dx}$ représente la pente de la courbe en chaque point.</em>
+  </p>
 
 <p><a name="figure8">
 
-<p>If a curve is sloping up at $45°$ at a particular point,
-as in <a href="#figure8">Figure 8</a>, $dy$ and $dx$ will be equal, and the value
-of $\dfrac{dy}{dx} = 1$.
+<p>Si la pente d'une courbe est de  $45°$ en un point donné, comme dans  <a href="#figure8">Figure 8</a>, $dy$ et $dx$ seront égaux, et la valeur  $\dfrac{dy}{dx}$ et $1$.
+  </p>
 
 
-<p>If the curve slopes up steeper than $45°$ (<a href="#figure9">Figure 9</a>),
-$\dfrac{dy}{dx}$ will be greater than $1$.
+
+<p>Si la pente de la courbe est supérieure à  $45°$ (<a href="#figure9">Figure 9</a>),
+$\dfrac{dy}{dx}$ sera plus grand que $1$.
 
 <p><a name="figure9">
 <img src="https://calculusmadeeasy.org/33283-t/images/091a.pdf.png-1.png">
 
 
-<p>If the curve slopes up very gently, as in <a href="#figure10">Figure 10</a>,
-$\dfrac{dy}{dx}$ will be a fraction smaller than $1$.
+<p>Si une courbe remonte très doucement, comme dans  <a href="#figure10">Figure 10</a>,
+$\dfrac{dy}{dx}$ est une fraction qui vaudra moins que $1$. 
+</p>
 
 <p><a name="figure10">
 <img src="https://calculusmadeeasy.org/33283-t/images/091b.pdf.png-1.png">
+</a>
+</p>
 
-<p>For a horizontal line, or a horizontal place in a
-curve, $dy=0$, and therefore $\dfrac{dy}{dx}=0$.
+<p>Pour une ligne horizontale, ou un point où une courbe passe par l'horizontale, $dy=0$, et par conséquent $\dfrac{dy}{dx}=0$.
 
 <a name="figure11">
 <img src="https://calculusmadeeasy.org/33283-t/images/091c.pdf.png-1.png">
+</p>
 
-<p>If a curve slopes <em>downward</em>, as in <a href="#figure11">Figure 11</a>, $dy$ will
-be a step down, and must therefore be reckoned of
-
-negative value; hence $\dfrac{dy}{dx}$ will have negative sign
-also.
+<p>Si une courbe est dirigée vers le  <em>bas</em>, comme dans  <a href="#figure11">Figure 11</a>, $dy$ sera vers le bas, on lui assigne alors un signe négatif, donnant une valeur négative à $\dfrac{dy}{dx}$.
 
 <p>If the “curve” happens to be a straight line, like
 that in <a href="#figure12">Figure 12</a>, the value of $\dfrac{dy}{dx}$ will be the same at
@@ -476,7 +461,7 @@ of the point of contact, and what is the value of $b$?
 <br>
 <hr>
 <a href="11-maxima-et-minima-Calculus-Made-Easy-FR.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+<a href="https://iamhenri.github.io/Calculus-Made-Easy---une-traduction-francaise/">Main Page &uarr;</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
